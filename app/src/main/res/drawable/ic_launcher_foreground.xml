@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Greek Letter Delta (Δ) with Rounded Corners -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:strokeColor="#FFFFFF"
+        android:pathData="M54,35
+                         Q55,33 56,35
+                         L74,73
+                         Q75,75 74,75
+                         H34
+                         Q33,75 34,73
+                         Z" />
+
+    <!-- Inner Delta for consistent thickness -->
+    <path
+        android:fillColor="#5948ad"
+        android:pathData="M54,45
+                         Q55,43 56,45
+                         L68,68
+                         Q69,70 68,70
+                         H40
+                         Q39,70 40,68
+                         Z" />
+</vector>
