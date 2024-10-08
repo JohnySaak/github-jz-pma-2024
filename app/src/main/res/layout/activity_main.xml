@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Checkboxes for selecting the type of burger -->
+    <CheckBox
+        android:id="@+id/cheeseBurger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cheese-burger"/>
+
+    <CheckBox
+        android:id="@+id/baconBurger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bacon-burger"/>
+
+    <CheckBox
+        android:id="@+id/chiliBurger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chili-burger"/>
+
+    <!-- RadioGroup for selecting doneness -->
+    <RadioGroup
+        android:id="@+id/donenessGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"/>
+
+        <RadioButton
+            android:id="@+id/rare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rare"/>
+
+        <RadioButton
+            android:id="@+id/wellDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Well Done"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order"/>
+
+    <TextView
+        android:id="@+id/orderSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="Order Summary"/>
+
+    <ImageView
+        android:id="@+id/burgerImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"/>
+</LinearLayout>
