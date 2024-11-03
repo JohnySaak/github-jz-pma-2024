@@ -13,6 +13,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalContext
+import android.content.Intent
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.runtime.remember
 
 class SecondActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,10 +39,15 @@ class SecondActivity : ComponentActivity() {
             Log.e("SecondActivity", "Error: ${e.message}")
         }
     }
+
+
+
 }
 
 @Composable
 fun SecondScreen(name: String, surname: String, age: String, place: String) {
+    val context = LocalContext.current
+
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
@@ -60,6 +69,21 @@ fun SecondScreen(name: String, surname: String, age: String, place: String) {
             Text(text = "Příjmení: $surname", style = MaterialTheme.typography.bodyLarge)
             Text(text = "Věk: $age", style = MaterialTheme.typography.bodyLarge)
             Text(text = "Bydliště: $place", style = MaterialTheme.typography.bodyLarge)
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            Button(
+                onClick = {
+                    // Navigate back to MainActivity
+                    val intent = Intent(context, MainActivity::class.java)
+                    context.startActivity(intent)
+                    (context as ComponentActivity).finish()
+                },
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Zpět na hlavní obrazovku")
+            }
         }
     }
 }
+
